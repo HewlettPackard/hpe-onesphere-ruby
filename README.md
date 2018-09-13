@@ -18,7 +18,42 @@ Or install it yourself as:
 
 ## Usage
 
-@TODO
+#### Import the package
+
+```ruby
+require 'hpe-onesphere'
+```
+
+#### Connect to the OneSphere server
+
+```ruby
+onesphere = OneSphere::Connect(
+  host: "https://onesphere-host-url",
+  username: "username",
+  password: "password"
+)
+```
+
+If authentication is successful, `one_sphere` will be an instance of `OneSphere::Client`
+
+
+#### Make calls to the OneSphere API
+
+```ruby
+print("Status:", onesphere.get_status())
+```
+
+example output
+
+```json
+{"service":"OK","database":""}
+```
+
+#### Disconnect from the OneSphere server
+
+```go
+onesphere.disconnect()
+```
 
 
 ## Development
