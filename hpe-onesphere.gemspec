@@ -36,4 +36,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+
+  spec.add_runtime_dependency "addressable", "~> 2.5.2"
+  spec.add_runtime_dependency "multipart-post", "~> 2.0.0"
+
 end

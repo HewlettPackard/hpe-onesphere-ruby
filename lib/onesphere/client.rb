@@ -3,7 +3,9 @@ module OneSphere
   # Client provides an interface to make calls to the OneSphere API
   class Client
 
-    def new(host_url, token)
+    attr_reader :host_url, :token
+
+    def initialize(host_url, token)
       @host_url = host_url
       @token = token
     end
@@ -32,7 +34,7 @@ module OneSphere
 
     def build_url(path) @host_url + path end
 
-    def send_http_req(method, path, params, body)
+    def send_http_req(method, path, params = nil, body = nil)
 
       # parse body from hash to json
       payload = body
